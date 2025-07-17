@@ -1,0 +1,32 @@
+
+
+<!-- success is an array toh agar flash messege mein kuch nai h tabb bhi green patti dikhai degi ...toh ye kro ki agar success array khaalo h toh n ashow ho green patti  -->
+
+<% if(success && success.length) { %>
+
+    <div class="alert alert-success alert-dismissible fade show col-6 offset-3" role="alert"  >
+        <!-- defined in middleware in res.locals.succes  -->
+        <%= success %> 
+        <button type="button" 
+        class="btn-close" 
+        data-bs-dismiss="alert"
+         aria-label="Close">
+        </button>
+    </div>
+
+<% } %>
+
+
+<% if(error && error.length) { %>
+
+    <div class="alert alert-danger alert-dismissible fade show col-6 offset-3" role="alert"  >
+        <!-- defined in middleware in res.locals.succes  -->
+        <%= error %> 
+        <button type="button" 
+        class="btn-close" 
+        data-bs-dismiss="alert"
+         aria-label="Close">
+        </button>
+    </div>
+
+<% } %>
