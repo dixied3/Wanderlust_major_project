@@ -85,8 +85,9 @@ app.use((req , res , next) => {
 }) ; 
 
 app.get("/", (req, res) => {
-    res.render("home.ejs"); // make sure you have views/home.ejs
-  });
+    res.redirect("/listings");
+}) ; 
+
 
 app.use("/listings" , listingRouter) ; 
 app.use("/listings/:id/reviews" , reviewRouter) ; 
